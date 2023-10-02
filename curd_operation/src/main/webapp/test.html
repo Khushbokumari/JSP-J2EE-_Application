@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operations</title>
+</head>
+<body>
+    <form action="user" method="post">
+        <input type="hidden" name="action" value="create">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        Email: <input type="email" name="email"><br>
+        <input type="submit" value="Create">
+    </form>
+
+    <hr>
+
+    <h2>Users</h2>
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        <!-- Loop through users here -->
+        <tr>
+            <td>John</td>
+            <td>john@example.com</td>
+            <td>
+                <a href="user?action=edit&id=0">Edit</a>
+                <a href="user?action=delete&id=0">Delete</a>
+            </td>
+        </tr>
+        <!-- End loop -->
+    </table>
+</body>
+</html>
